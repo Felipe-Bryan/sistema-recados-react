@@ -1,10 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const DisplayStyled = styled.div`
+const DisplayCentered = styled.div`
+  height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 `;
 
-export default DisplayStyled;
+export default DisplayCentered;
