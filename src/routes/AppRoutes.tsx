@@ -1,10 +1,18 @@
 import React from 'react';
 import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom';
-import { Home } from '../pages';
+import { Cadastro, Home, Login } from '../pages';
 
 const router = createBrowserRouter([
   {
     path: '/',
+    element: <Login />,
+  },
+  {
+    path: '/cadastro',
+    element: <Cadastro />,
+  },
+  {
+    path: '/home',
     element: <Home />,
   },
   {
