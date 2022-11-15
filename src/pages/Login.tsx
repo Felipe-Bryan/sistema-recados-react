@@ -7,12 +7,12 @@ export const Login: React.FC = () => {
   return (
     <DisplayCentered>
       <Input label="Email"></Input>
-      <PasswordIpt></PasswordIpt>
+      <PasswordIpt label="Senha"></PasswordIpt>
       <CheckSession label="Permanecer Conectado"></CheckSession>
       <br />
       <ButtonDefault name="Entrar"></ButtonDefault>
       <br />
-      <Typography>Ainda não tem uma conta?</Typography>
+      <Typography variant="subtitle1">Ainda não tem uma conta?</Typography>
       <Link to={'/cadastro'}>Cadastre-se.</Link>
     </DisplayCentered>
   );

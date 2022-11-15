@@ -13,7 +13,11 @@ interface State {
   showPassword: boolean;
 }
 
-export default function PasswordIpt() {
+interface PasswordIptProps {
+  label: string;
+}
+
+const PasswordIpt: React.FC<PasswordIptProps> = ({ label }) => {
   const [values, setValues] = React.useState<State>({
     password: '',
     showPassword: false,
@@ -38,7 +42,7 @@ export default function PasswordIpt() {
     <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
       <div>
         <FormControl sx={{ m: 1, width: '30ch' }} variant="standard">
-          <InputLabel htmlFor="standard-adornment-password">Password</InputLabel>
+          <InputLabel htmlFor="standard-adornment-password">{label}</InputLabel>
           <Input
             id="standard-adornment-password"
             type={values.showPassword ? 'text' : 'password'}
@@ -56,4 +60,6 @@ export default function PasswordIpt() {
       </div>
     </Box>
   );
-}
+};
+
+export default PasswordIpt;
