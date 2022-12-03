@@ -15,9 +15,10 @@ interface State {
 
 interface PasswordIptProps {
   label: string;
+  inputRef: any;
 }
 
-const PasswordIpt: React.FC<PasswordIptProps> = ({ label }) => {
+const PasswordIpt: React.FC<PasswordIptProps> = ({ label, inputRef }) => {
   const [values, setValues] = React.useState<State>({
     password: '',
     showPassword: false,
@@ -44,6 +45,7 @@ const PasswordIpt: React.FC<PasswordIptProps> = ({ label }) => {
         <FormControl sx={{ m: 1, width: '30ch' }} variant="standard">
           <InputLabel htmlFor="standard-adornment-password">{label}</InputLabel>
           <Input
+            inputRef={inputRef}
             id="standard-adornment-password"
             type={values.showPassword ? 'text' : 'password'}
             value={values.password}

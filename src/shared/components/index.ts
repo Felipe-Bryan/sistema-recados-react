@@ -5,5 +5,6 @@ import DisplayCentered from './DisplayCentered';
 import Input from './Input';
 import PasswordIpt from './PasswordIpt';
 import SimplePaper from './SimplePaper';
+import StickyHeadTable from './StickyHeadTable';
 
-export { AppStyled, ButtonDefault, CheckSession, DisplayCentered, Input, PasswordIpt, SimplePaper };
+export { AppStyled, ButtonDefault, CheckSession, DisplayCentered, Input, PasswordIpt, SimplePaper, StickyHeadTable };
